@@ -3,13 +3,17 @@
 import Avatar from "../reusable/Avatar";
 import MenuItem from "./MenuItem";
 
+import useRegisterModal from "@/app/hooks/useRegisterModal";
+import useLoginModal from "@/app/hooks/useLoginModal";
+
 import { AiOutlineMenu } from "react-icons/ai";
 import { useCallback, useState } from "react";
 import { useRouter } from "next/navigation";
 
 const UserMenu = () => {
   const router = useRouter();
-
+  const registerModal = useRegisterModal();
+  const loginModal = useLoginModal();
   const [isOpen, setIsOpen] = useState(false);
 
   // It'll reverse the current value of isOpen
@@ -76,8 +80,8 @@ const UserMenu = () => {
         >
           <div className=" flex flex-col cursor-pointer">
             <>
-              <MenuItem onClick={() => {}} label="Login" />
-              <MenuItem onClick={() => {}} label="Sign up" />
+              <MenuItem onClick={loginModal.onOpen} label="Login" />
+              <MenuItem onClick={registerModal.onOpen} label="Sign up" />
             </>
           </div>
         </div>
