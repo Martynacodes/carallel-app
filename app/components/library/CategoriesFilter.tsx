@@ -12,7 +12,9 @@ const CategoriesFilter: FC<CategoriesFilterProps> = ({
 }) => {
   return (
     <div>
-      <button>All</button>
+      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+        All
+      </button>
       <button>Shared</button>
       <button>Bookmarks</button>
       <button>Read</button>
