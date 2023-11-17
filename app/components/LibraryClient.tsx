@@ -33,9 +33,9 @@ const LibraryClient: React.FC<ArticleClientProps> = ({
   const router = useRouter();
   const [category, setCategory] = useState<string>(initialCategory);
 
-  axios.get("/api/library").catch(() => {
-    toast.error("Something went wrong :(");
-  });
+  // axios.get("/api/library").catch(() => {
+  //   toast.error("Something went wrong :(");
+  // });
 
   return (
     <Container>
