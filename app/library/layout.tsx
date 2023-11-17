@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 
-import Navbar from "../app/components/navbar/Navbar";
 import CategoriesFilter from "@/app/components/library/CategoriesFilter";
 import ArticleCard from "@/app/components/library/ArticleCard";
 import CircleCard from "@/app/components/library/CircleCard";
@@ -22,8 +21,16 @@ const Library = () => {
 
   useEffect(() => {
     fetch("/api/library")
-      .then((response) => response.json())
-      .then((data) => setArticles(data));
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => setArticles(data))
+      .catch((error) => {
+        console.error("Error:", error);
+      });
   }, []);
 
   const filteredArticles = articles.filter(
@@ -32,7 +39,6 @@ const Library = () => {
 
   return (
     <div>
-      <Navbar />
       <CategoriesFilter category={category} setCategory={setCategory} />
       <h2>Recommended</h2>
       <div className="flex overflow-x-scroll">

@@ -1,16 +1,3 @@
-// import type { NextApiRequest, NextApiResponse } from "next";
-
-// type ResponseData = {
-//   message: string;
-// };
-
-// export default function handler(
-//   req: NextApiRequest,
-//   res: NextApiResponse<ResponseData>
-// ) {
-//   res.status(200).json({ message: "Hello from the LIBRARY" });
-// }
-
 import type { NextApiRequest, NextApiResponse } from "next";
 
 type Article = {
@@ -23,10 +10,10 @@ type Article = {
 
 type ResponseData = Article[];
 
-export default function handler(
+export async function GET(
   req: NextApiRequest,
   res: NextApiResponse<ResponseData>
-) {
+): Promise<void> {
   // Mock library data
   const library: ResponseData = [
     {
@@ -43,10 +30,12 @@ export default function handler(
       content: "This is the main content of Article 2",
       category: "All",
     },
-
     // Add more articles here
   ];
 
   // Return library data
   res.status(200).json(library);
 }
+
+// Use the GET function as the route handler
+export default GET;
