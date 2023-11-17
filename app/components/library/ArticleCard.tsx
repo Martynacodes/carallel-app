@@ -1,3 +1,5 @@
+"use client";
+
 // app/components/ArticleCard.tsx
 import { FC } from "react";
 import Link from "next/link";

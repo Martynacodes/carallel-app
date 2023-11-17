@@ -1,3 +1,5 @@
+"use client";
+
 // components/CategoriesFilter.tsx
 import { FC, Dispatch, SetStateAction } from "react";
 
