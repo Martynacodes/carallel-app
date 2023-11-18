@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ResourceCard from "./ResourceCard";
+import ResourcesCard from "./ResourcesCard";
 
 import { additionalResources } from "@/app/mockData";
 
@@ -13,7 +13,11 @@ const AdditionalResources = () => {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-rows-2 gap-16 mt-16">
-        <ResourceCard />
+        {additionalResources.map((resource) => {
+          return (
+            <ResourcesCard key={resource.id} AdditionalResources={resource} />
+          );
+        })}
       </div>
     </section>
   );

@@ -21,10 +21,6 @@ const CircleCard = ({ familySectionOptions }: FamilySectionOptionsProps) => {
     "bg-cyan-200",
     "bg-lime-200",
     "bg-emerald-200",
-    "bg-teal-200",
-    "bg-lightBlue-200",
-    "bg-purple-200",
-    "bg-trueGray-200",
   ];
   const randomBgColor =
     backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
