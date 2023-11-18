@@ -5,9 +5,7 @@ import RecommendedArticles from "../components/library/RecommendedArticles";
 import MyFamilySection from "../components/library/MyFamilySection";
 import AdditionalResources from "../components/library/AdditionalResources";
 
-export default async function Library() {
-  // const data = await getData();
-
+export default async function LibraryPage() {
   return (
     <Container>
       <Categories />

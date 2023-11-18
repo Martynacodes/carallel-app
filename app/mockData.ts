@@ -5,6 +5,7 @@ export const articles = [
     subtitle: "Subtitle 1",
     content: "Content of Article 1",
     category: "All",
+    url: "/articles/1",
   },
   {
     id: 2,
@@ -12,21 +13,24 @@ export const articles = [
     subtitle: "Subtitle 2",
     content: "Content of Article 2",
     category: "Category 2",
+    url: "/articles/2",
   },
   // Add more articles as needed
   {
     id: 3,
     title: "Navigating the Family Dynamics of Caregiving",
-    subtitle: "Subtitle 2",
-    content: "Content of Article 2",
+    subtitle: "Subtitle 3",
+    content: "Content of Article 3",
     category: "Category 2",
+    url: "/articles/3",
   },
   {
     id: 4,
     title: "Becoming a Caregiver Overnight",
-    subtitle: "Subtitle 2",
-    content: "Content of Article 2",
-    category: "Category 2",
+    subtitle: "Subtitle 4",
+    content: "Content of Article 4",
+    category: "Category 4",
+    url: "/articles/4",
   },
 ];
 
@@ -80,5 +84,24 @@ export const categories = [
   {
     id: 4,
     title: "Read",
+  },
+];
+
+export const contentCategories = [
+  {
+    id: 1,
+    title: "New to Caregiving",
+  },
+  {
+    id: 2,
+    title: "What to Expect",
+  },
+  {
+    id: 3,
+    title: "Mental Health",
+  },
+  {
+    id: 4,
+    title: "Family Dynamics",
   },
 ];

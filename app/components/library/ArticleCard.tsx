@@ -6,6 +6,7 @@ type Article = {
   title: string;
   subtitle: string;
   category: string;
+  url: string;
 };
 
 type ArticleCardProps = {
@@ -26,7 +27,7 @@ const ArticleCard = ({ article }: ArticleCardProps) => {
 
   return (
     <div className="group flex flex-col items-center text-dark dark:text-light shadow-lg">
-      <Link href={"/"} className="h-full rounded-t-xl overflow-hidden">
+      <Link href={article.url} className="h-full rounded-t-xl overflow-hidden">
         <Image
           src={"/images/moon.png"}
           alt={article.title}
@@ -39,7 +40,7 @@ const ArticleCard = ({ article }: ArticleCardProps) => {
 
       <div className="flex flex-col w-full bg-white rounded-b-xl ">
         <Link
-          href={"/"}
+          href={article.url}
           className="inline-block my-1 mt-3  items-center justify-center"
         >
           <h2 className="font-semibold capitalize text-base sm:text-lg mx-4">
