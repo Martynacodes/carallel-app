@@ -1,19 +1,13 @@
-// async function getData() {
-//   const res = await fetch("/api/library");
-//   if (!res.ok) {
-//     throw new Error("Failed to fetch data");
-//   }
-
-//   return res.json();
-// }
 import "@/app/globals.css";
+import Container from "../components/reusable/Container";
+import RecommendedArticles from "../components/library/RecommendedArticles";
 
 export default async function Library() {
   // const data = await getData();
 
   return (
-    <main>
-      <h1>Hello from the LIBRARY!</h1>
-    </main>
+    <Container>
+      <RecommendedArticles />
+    </Container>
   );
 }

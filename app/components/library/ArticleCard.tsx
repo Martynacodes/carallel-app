@@ -1,40 +1,56 @@
-"use client";
-
-// app/components/ArticleCard.tsx
-import { FC } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
-type ArticleCardProps = {
+type Article = {
   id: number;
   title: string;
   subtitle: string;
-  content: string;
   category: string;
 };
 
-const ArticleCard: FC<ArticleCardProps> = ({
-  id,
-  title,
-  subtitle,
-  content,
-  category,
-}) => (
-  <div key={id}>
-    <Link href={`/article?id=${id}`}>
-      <div>
-        <h2>{title}</h2>
-        <h3>{subtitle}</h3>
-        <h6>{category}</h6>
-        <p>{content}</p>
+type ArticleCardProps = {
+  article: Article;
+};
+
+const ArticleCard = ({ article }: ArticleCardProps) => {
+  const backgroundColors = [
+    "bg-sky-200",
+    "bg-violet-200",
+    "bg-orange-200",
+    "bg-amber-200",
+    "bg-rose-200",
+    "bg-fuchsia-200",
+  ];
+  const randomBgColor =
+    backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
+
+  return (
+    <div className="group flex flex-col items-center text-dark dark:text-light">
+      <Link href={"/"} className="h-full rounded-xl overflow-hidden">
+        <Image
+          src={"/images/moon.png"}
+          alt={article.title}
+          width={100}
+          height={100}
+          className={`${randomBgColor} aspect-[4/3] w-full h-full object-cover object-center group-hover:scale-105 transition-all ease duration-300`}
+          sizes="(max-width: 640px) 100vw,(max-width: 1024px) 50vw, 33vw"
+        />
+      </Link>
+
+      <div className="flex flex-col w-full mt-4">
+        <Link href={"/"} className="inline-block my-1">
+          <h2 className="font-semibold capitalize text-base sm:text-lg">
+            <span
+              className="bg-gradient-to-r from-accent/50 to-accent/50  dark:from-accentDark/50
+          dark:to-accentDark/50 bg-[length:0px_6px] group-hover:bg-[length:100%_6px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 "
+            >
+              {article.title}
+            </span>
+          </h2>
+        </Link>
       </div>
-    </Link>
-  </div>
-);
+    </div>
+  );
+};
 
 export default ArticleCard;
-
-// const ArticleCard = () => {
-//   return <h3>Article Card</h3>;
-// };
-
-// export default ArticleCard;

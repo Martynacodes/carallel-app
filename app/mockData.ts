@@ -1,14 +1,14 @@
 export const articles = [
   {
     id: 1,
-    title: "Article 1",
+    title: "Decoding Dementia: A Caregiver's Handbook",
     subtitle: "Subtitle 1",
     content: "Content of Article 1",
     category: "All",
   },
   {
     id: 2,
-    title: "Article 2",
+    title: "Working On Our Mental Health",
     subtitle: "Subtitle 2",
     content: "Content of Article 2",
     category: "Category 2",
@@ -16,14 +16,14 @@ export const articles = [
   // Add more articles as needed
   {
     id: 3,
-    title: "Article 3",
+    title: "Navigating the Family Dynamics of Caregiving",
     subtitle: "Subtitle 2",
     content: "Content of Article 2",
     category: "Category 2",
   },
   {
     id: 4,
-    title: "Article 4",
+    title: "Becoming a Caregiver Overnight",
     subtitle: "Subtitle 2",
     content: "Content of Article 2",
     category: "Category 2",
