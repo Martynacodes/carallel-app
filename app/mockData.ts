@@ -30,7 +30,7 @@ export const articles = [
   },
 ];
 
-export const articleCategories = [
+export const myFamilySectionOptions = [
   {
     id: 1,
     title: "My family and relationships",
@@ -61,5 +61,24 @@ export const additionalResources = [
   {
     id: 4,
     title: "Resource 4",
+  },
+];
+
+export const categories = [
+  {
+    id: 1,
+    title: "All",
+  },
+  {
+    id: 2,
+    title: "Shared",
+  },
+  {
+    id: 3,
+    title: "Bookmarks",
+  },
+  {
+    id: 4,
+    title: "Read",
   },
 ];
