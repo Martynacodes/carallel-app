@@ -10,12 +10,14 @@ const useNavigation = () => {
   const [isLibraryActive, setIsLibraryActive] = useState(false);
   const [isPlanActive, setIsPlanActive] = useState(false);
   const [isToolsActive, setIsToolsActive] = useState(false);
+  const [isSupportActive, setIsSupportActive] = useState(false);
 
   useEffect(() => {
     setIsHomeActive(false);
     setIsLibraryActive(false);
     setIsPlanActive(false);
     setIsToolsActive(false);
+    setIsSupportActive(false);
 
     switch (pathname) {
       case "/":
@@ -41,6 +43,7 @@ const useNavigation = () => {
     isLibraryActive,
     isPlanActive,
     isToolsActive,
+    isSupportActive,
   };
 };
 
