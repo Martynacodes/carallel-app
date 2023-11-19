@@ -15,3 +15,9 @@ html {
 body {
   @apply bg-orange-50;
 }
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-panel {
+  background-color: #dfd9cf;
+  border-radius: 1px;
+}

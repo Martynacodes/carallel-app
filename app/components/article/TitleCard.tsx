@@ -40,12 +40,12 @@ const TitleCard: React.FC = () => {
       />
 
       <div className="flex flex-row justify-start p-6">
-        <h2 className="font-semibold capitalize text-base sm:text-lg mx-4">
+        <h2 className="font-playfair font-semibold text-base sm:text-3xl mx-4">
           <span
             className="bg-gradient-to-r from-accent/50 to-accent/50  dark:from-accentDark/50
           dark:to-accentDark/50 bg-[length:0px_6px] group-hover:bg-[length:100%_6px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 "
           >
-            Article title
+            {"We're all caregivers"}
           </span>
         </h2>
       </div>

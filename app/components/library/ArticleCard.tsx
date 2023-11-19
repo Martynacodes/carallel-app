@@ -26,7 +26,7 @@ const ArticleCard = ({ article }: ArticleCardProps) => {
     backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
 
   return (
-    <div className="group flex flex-col items-center text-dark dark:text-light shadow-lg">
+    <div className="ml-8 group flex flex-col items-center text-dark dark:text-light shadow-lg">
       <Link href={article.url} className="h-full rounded-t-xl overflow-hidden">
         <Image
           src={"/images/moon.png"}
@@ -43,7 +43,7 @@ const ArticleCard = ({ article }: ArticleCardProps) => {
           href={article.url}
           className="inline-block my-1 mt-3  items-center justify-center"
         >
-          <h2 className="font-semibold capitalize text-base sm:text-lg mx-4">
+          <h2 className="font-sans text-sm sm:text-base mx-4 line-clamp-2 p-1">
             <span
               className="bg-gradient-to-r from-accent/50 to-accent/50  dark:from-accentDark/50
           dark:to-accentDark/50 bg-[length:0px_6px] group-hover:bg-[length:100%_6px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 "

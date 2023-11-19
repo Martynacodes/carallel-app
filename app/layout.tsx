@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Nunito } from "next/font/google";
+import { Playfair_Display, Nunito } from "next/font/google";
 import "./globals.css";
 
 import ClientOnly from "./components/reusable/ClientOnly";
@@ -14,8 +14,14 @@ export const metadata: Metadata = {
   description: "Caregivers are a hidden force.",
 };
 
-const font = Nunito({
+const playfairDisplayFont = Playfair_Display({
   subsets: ["latin"],
+  variable: "--font-playfair",
+});
+
+const nunitoFont = Nunito({
+  subsets: ["latin"],
+  variable: "--font-nunito",
 });
 
 export default function RootLayout({
@@ -24,8 +30,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={font.className}>
+    <html
+      lang="en"
+      className={`${nunitoFont.variable} ${playfairDisplayFont.variable}`}
+    >
+      <body>
         <ToasterProvider />
         <RegisterModal />
         <LoginModal />
