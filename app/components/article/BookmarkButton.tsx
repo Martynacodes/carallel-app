@@ -15,8 +15,7 @@ const BookmarkButton = () => {
         select-none
         items-center
         gap-3 
-        rounded-3xl
-       
+        rounded-3xl  
         py-2 
         px-3.5
         text-center
@@ -28,7 +27,7 @@ const BookmarkButton = () => {
         hover:bg-green-400
         focus:opacity-[0.85]
         focus:shadow-none
-        transition-all ease duration-400
+       ease duration-400
         ${selected ? "bg-green-700 text-white" : "bg-slate-200 text-green-700"}
         `}
         type="button"

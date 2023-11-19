@@ -38,9 +38,8 @@ export default function RootLayout({
         <ToasterProvider />
         <RegisterModal />
         <LoginModal />
-        <Navbar />
 
-        <div className="pb-20 pt-28">{children}</div>
+        <div className="pb-20">{children}</div>
       </body>
     </html>
   );

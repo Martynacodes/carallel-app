@@ -9,59 +9,50 @@ type ContentCategory = {
 };
 
 const ContentCategoryButton = () => {
-  const [selected, setSelected] = useState<number | null>(null);
-  return (
-    <div
-      className="flex 
-flex-wrap
-items-center 
-justify-center 
-gap-2
-p-3
-border-b-2
-transition
-cursor-pointer
-"
-    >
-      <button
-        onClick={() => setSelected(1)}
-        className={`
-    font-bold
-    py-4 
-    px-12
-    rounded-full
-    inline-block  
-    sm:py-3 
-    sm:px-10
-    hover:shadow-lg
-    transition-all
-    ease
-    duration-400  
-    sm:text-base
-   
-    ${selected === 1 ? "bg-yellow-400 text-white" : "bg-yellow-600 text-white"}
-      `}
-      >
-        New to Caregiving
-      </button>
+  const [selected, setSelected] = useState(false);
+  const handleClick = () => {
+    setSelected(!selected);
+  };
 
-      <button
-        onClick={() => setSelected(2)}
-        className={`
-    font-bold
-    py-4 
-    px-12
-    rounded-full
-    inline-block  
-    sm:py-3 
-    sm:px-10 hover:shadow-lg transition-all ease duration-400  
-    sm:text-base
-   
-    ${selected === 2 ? "bg-yellow-400 text-white" : "bg-yellow-600 text-white"}
-      `}
-      >
-        What to Expect
-      </button>
+  const buttonData = [
+    { id: 1, text: "New to Caregiving", categoryPage: "/" },
+    { id: 2, text: "What to Expect", categoryPage: "/" },
+  ];
+
+  return (
+    <div className="flex items-center gap-4">
+      {buttonData.map((button) => (
+        <button
+          key={button.id}
+          onClick={handleClick}
+          className={`
+            flex
+            select-none
+            items-center
+            gap-3 
+            rounded-3xl  
+            py-2 
+            px-3.5
+            text-center
+            align-middle 
+            font-sans
+            text-xs
+            font-bold
+            hover:bg-yellow-400
+            transition-all
+            ease
+            duration-400  
+            whitespace-nowrap
+            ${
+              selected ? "bg-yellow-400 text-white" : "bg-yellow-600 text-white"
+            }
+          `}
+          type="button"
+          data-ripple-light="true"
+        >
+          {button.text}
+        </button>
+      ))}
     </div>
   );
 };
