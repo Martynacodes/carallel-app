@@ -5,7 +5,7 @@ import CircleCard from "./CircleCard";
 
 const MyFamilySection = () => {
   return (
-    <section className="mx-auto flex flex-col justify-center max-w-sm px-5 mt-8">
+    <section className="mx-auto flex flex-col justify-center max-w-sm px-5 mt-8 md:max-w-full lg:max-w-full lg:px-12 xl:px-16">
       <div className="flex flex-row gap-4 overflow-y-auto">
         {myFamilySectionOptions.map((option) => {
           return (
