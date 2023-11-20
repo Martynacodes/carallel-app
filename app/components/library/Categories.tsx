@@ -23,6 +23,9 @@ const Categories = () => {
       cursor-pointer
       md:pt-0
       pt-20
+      md:mt-4
+      lg:mt-4
+  xl:mt-6
       "
     >
       {categories.map((category: Category) => (
