@@ -6,7 +6,7 @@ import ClientOnly from "./components/reusable/ClientOnly";
 import Navbar from "./components/navbar/Navbar";
 import RegisterModal from "./components/modals/RegisterModal";
 import LoginModal from "./components/modals/LoginModal";
-
+import AuthProvider from "./providers/AuthProvider";
 import ToasterProvider from "./providers/ToasterProvider";
 
 export const metadata: Metadata = {
@@ -35,11 +35,12 @@ export default function RootLayout({
       className={`${nunitoFont.variable} ${playfairDisplayFont.variable}`}
     >
       <body>
-        <ToasterProvider />
-        <RegisterModal />
-        <LoginModal />
-
-        <div className="pb-20">{children}</div>
+        <AuthProvider>
+          <ToasterProvider />
+          <RegisterModal />
+          <LoginModal />
+          <div className="pb-20">{children}</div>
+        </AuthProvider>
       </body>
     </html>
   );
