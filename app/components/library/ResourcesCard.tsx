@@ -31,7 +31,7 @@ const ResourcesCard = ({ AdditionalResources }: AdditionalResourceProps) => {
 
   return (
     <div className="relative flex w-full  flex-row rounded-xl  bg-clip-border text-gray-700 shadow-md">
-      <Link href={"/"} className="h-full rounded-t-xl overflow-hidden">
+      <Link href={"/"} className="rounded-t-xl overflow-hidden p-4">
         <Image
           src={"/images/moon.png"}
           alt="Additional Resources"

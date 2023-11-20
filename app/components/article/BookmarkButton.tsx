@@ -11,6 +11,9 @@ const BookmarkButton = () => {
       <button
         onClick={handleClick}
         className={`
+        ml-0
+        mt-0
+        m-4
         flex
         select-none
         items-center

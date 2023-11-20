@@ -9,7 +9,7 @@ export const articles = [
   },
   {
     id: 2,
-    title: "Working On Our Mental Health",
+    title: "Working On Our Mental Health: A Caregiver's Handbook",
     subtitle: "Subtitle 2",
     content: "Content of Article 2",
     category: "Category 2",
@@ -31,6 +31,22 @@ export const articles = [
     content: "Content of Article 4",
     category: "Category 4",
     url: "/articles/4",
+  },
+  {
+    id: 5,
+    title: "Compassion in stressful times: A Caregiver's Handbook",
+    subtitle: "Subtitle 5",
+    content: "Content of Article 5",
+    category: "Category 5",
+    url: "/articles/5",
+  },
+  {
+    id: 6,
+    title: "How contact with nature can improve our mental health",
+    subtitle: "Subtitle 6",
+    content: "Content of Article 6",
+    category: "Category 6",
+    url: "/articles/6",
   },
 ];
 

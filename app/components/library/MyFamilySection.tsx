@@ -5,11 +5,14 @@ import CircleCard from "./CircleCard";
 
 const MyFamilySection = () => {
   return (
-    <section className="w-full  mt-16 sm:mt-24  md:mt-32 px-5 sm:px-10 md:px-24  sxl:px-32 flex flex-col items-center justify-center">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-rows-2 gap-16 mt-16">
+    <section className="mx-auto flex flex-col justify-center max-w-sm px-5 mt-8">
+      <div className="flex flex-row gap-4 overflow-y-auto">
         {myFamilySectionOptions.map((option) => {
           return (
-            <article key={option.id} className="col-span-1 row-span-1 relative">
+            <article
+              key={option.id}
+              className="min-w-[200px] sm:min-w-0 sm:w-full p-4"
+            >
               <CircleCard familySectionOptions={option} />
             </article>
           );

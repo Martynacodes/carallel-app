@@ -13,7 +13,7 @@ import useScrollingEffect from "@/app/hooks/useScroll";
 
 const BottomNav = () => {
   const scrollDirection = useScrollingEffect(); // Use the custom hook
-  const navClass = scrollDirection === "up" ? "" : " duration-500";
+  const navClass = scrollDirection === "up" ? "" : "opacity-25 duration-500";
 
   const [activeLink, setActiveLink] = useState("");
   const handleClick = (link: string) => {

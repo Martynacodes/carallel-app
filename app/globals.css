@@ -22,7 +22,7 @@ audio::-webkit-media-controls-panel {
   border-radius: 1px;
 }
 
-.desktop-nav {
+/* .desktop-nav {
   display: none;
 }
 
@@ -37,8 +37,7 @@ audio::-webkit-media-controls-panel {
 
   .mobile-nav {
     display: none;
-  }
-}
+  } */
 
 .page {
   background-color: rgb(255 247 237);

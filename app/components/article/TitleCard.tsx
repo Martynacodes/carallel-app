@@ -2,18 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { articles } from "@/app/mockData";
 
-// type Article = {
-//   id: number;
-//   title: string;
-//   subtitle: string;
-//   category: string;
-//   url: string;
-// };
-
-// type ArticleCardProps = {
-//   article: Article;
-// };
-
 const TitleCard: React.FC = () => {
   const article = articles.find((article) => article.id === 1);
 
@@ -29,7 +17,7 @@ const TitleCard: React.FC = () => {
     backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
 
   return (
-    <div className="group flex flex-row justify-between items-end rounded-3xl shadow-lg bg-lime-100 p-4 m-4 md:max-w-xl">
+    <div className="group flex flex-row justify-between items-end rounded-3xl shadow-lg bg-yellow-100 p-0 m-4 md:max-w-xl ml-0">
       <Image
         className="aspect-[4/3] object-cover group-hover:scale-105 transition-all ease duration-300"
         src={"/images/moon.png"}

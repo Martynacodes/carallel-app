@@ -1,6 +1,7 @@
 import "@/app/globals.css";
 
 import Navbar from "../components/navbar/Navbar";
+import TopNav from "../components/library/TopNav";
 import BottomNav from "../components/library/BottomNav";
 import Container from "../components/reusable/Container";
 import Categories from "../components/library/Categories";
@@ -11,7 +12,7 @@ import MaxWidthWrapper from "../components/library/MaxWidthWrapper";
 
 export default function LibraryPage() {
   return (
-    <>
+    <div>
       <MaxWidthWrapper>
         <Navbar />
         <Categories />
@@ -19,7 +20,8 @@ export default function LibraryPage() {
         <MyFamilySection />
         <AdditionalResources />
       </MaxWidthWrapper>
+      <TopNav />
       <BottomNav />
-    </>
+    </div>
   );
 }
